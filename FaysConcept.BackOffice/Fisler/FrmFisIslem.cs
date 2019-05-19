@@ -161,7 +161,7 @@ namespace FaysConcept.BackOffice.Fisler
             stokHareket.BarkodTuru = entity.BarkodTuru;
             stokHareket.DepoKodu = SettingsTool.AyarOku(SettingsTool.Ayarlar.FrmFisIslem_VarsayılanDepo);
             // settings üzerinden okunan depo kodunun depo adını getirme
-            stokHareket.DepoAdi = context.Depolar.SingleOrDefault(c => c.DepoKodu == stokHareket.DepoKodu).DepoAdi;
+            stokHareket.DepoAdi = context.Depolar.SingleOrDefault(c => c.DepoKodu == stokHareket.DepoKodu)?.DepoAdi;
             stokHareket.BirimFiyat = textFisTuru.Text == "Alış Faturası" ? entity.AlisFiyat1 : entity.SatisFiyat1;
             stokHareket.Birimi = entity.Birimi;
             stokHareket.Miktar = textMiktar.Value;

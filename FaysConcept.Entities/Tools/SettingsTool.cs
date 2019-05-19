@@ -31,7 +31,7 @@ namespace FaysConcept.Entities.Tools
                 {
 
                 }
-                ;
+                
                 data = parser.ReadFile(dosyaAdi);
             }
         }
